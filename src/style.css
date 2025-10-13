@@ -23,19 +23,120 @@ body {
   flex-direction: column;
 }
 
+/* Navigation Bar */
+.navbar {
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 22px;
+  color: rgb(128, 105, 48);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-brand:hover {
+  opacity: 0.8;
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  color: #e6eef8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav-link:hover {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--accent);
+}
+
+.nav-link.active {
+  background-color: rgba(255,122,89,0.1);
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #e6eef8;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 18px 28px;
   background: linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
   backdrop-filter: blur(4px);
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-weight: 700;
   font-size: 22px;
-  color: var(--accent);
+  color:rgb(128, 105, 48);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.brand:hover {
+  opacity: 0.8;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 
 /* Home page grid for states */
@@ -200,5 +301,50 @@ body {
   
   .state-card h3 {
     font-size: 16px;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: rgba(11, 22, 48, 0.95);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    display: block;
+    margin: 10px 0;
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-brand {
+    font-size: 20px;
+  }
+
+  .nav-logo {
+    width: 35px;
+    height: 35px;
   }
 }

@@ -3,12 +3,21 @@ import { Link } from 'react-router-dom';
 import statesData from '../data/statesData';
 import Navbar from '../components/Navbar';
 
-const HomePage = () => {
+const AllStatesPage = () => {
   return (
     <div className="app-root">
       <Navbar />
+      
+      <main className="container" style={{ padding: '40px 20px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h1 style={{ fontSize: '2.5rem', marginBottom: '10px', color: 'var(--accent)' }}>
+            All Indian States
+          </h1>
+          <p style={{ fontSize: '1.1rem', color: 'var(--muted)', maxWidth: '600px', margin: '0 auto' }}>
+            Explore the rich cultural heritage and traditional clothing from different states of India
+          </p>
+        </div>
 
-      <main className="container">
         <div className="home-grid">
           {statesData.map((state) => (
             <Link 
@@ -26,4 +35,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default AllStatesPage;

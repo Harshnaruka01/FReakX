@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import statesData from '../data/statesData';
 import ClothesDisplay from '../components/ClothesDisplay';
+import Navbar from '../components/Navbar';
 
 const StateDetailPage = () => {
   const { stateCode } = useParams();
@@ -12,9 +13,7 @@ const StateDetailPage = () => {
   if (!selectedState) {
     return (
       <div className="app-root">
-        <header className="topbar">
-          <div className="brand">India Traditions</div>
-        </header>
+        <Navbar />
         <main className="container">
           <div style={{ textAlign: 'center', padding: '40px' }}>
             <h2>State not found</h2>
@@ -29,9 +28,7 @@ const StateDetailPage = () => {
 
   return (
     <div className="app-root">
-      <header className="topbar">
-        <div className="brand">India Traditions</div>
-      </header>
+      <Navbar />
 
       <main className="container">
         <div>
