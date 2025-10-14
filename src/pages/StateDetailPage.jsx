@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import statesData from '../data/statesData';
 import ClothesDisplay from '../components/ClothesDisplay';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const StateDetailPage = () => {
   const { stateCode } = useParams();
@@ -22,6 +23,7 @@ const StateDetailPage = () => {
             </Link>
           </div>
         </main>
+        <Footer />
       </div>
     );
   }
@@ -49,6 +51,7 @@ const StateDetailPage = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

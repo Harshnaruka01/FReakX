@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SearchProvider } from './context/SearchContext';
 import HomePage from './pages/HomePage';
 import StateDetailPage from './pages/StateDetailPage';
 import AllStatesPage from './pages/AllStatesPage';
@@ -8,15 +9,17 @@ import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/state/:stateCode" element={<StateDetailPage />} />
-        <Route path="/states" element={<AllStatesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-    </Router>
+    <SearchProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/state/:stateCode" element={<StateDetailPage />} />
+          <Route path="/states" element={<AllStatesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Router>
+    </SearchProvider>
   );
 }
 
