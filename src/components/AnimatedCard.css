@@ -1,0 +1,243 @@
+/* Animated Card Wrapper */
+.animated-card-wrapper {
+  min-height: 500px;
+  width: 100%;
+}
+
+/* Grid View Styles */
+.main-banner-showcase {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.dress-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.dress-item-card {
+  background: #f9f9f9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure equal width */
+  min-height: 350px; /* Consistent height */
+}
+
+.dress-item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dress-item-card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+}
+
+.dress-info {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1; /* Allow content to expand */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dress-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.dress-desc {
+  font-size: 1rem;
+  color: #666;
+  opacity: 0.9;
+}
+
+/* Banner View Styles */
+.banner-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 30px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://user-gen-media-assets.s3.amazonaws.com/seedream_images/4f812072-2d4c-41ad-9a7e-255c61bd4213.png') center center/cover no-repeat;
+  filter: brightness(0.76);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 70px 30px;
+  color: #f9f8f5;
+}
+
+.dress-card-state {
+  background: rgba(255,255,255,0.75);
+  border-radius: 16px;
+  padding: 18px 8px 20px 8px;
+  text-align: center;
+  width: 100%; /* Equal width using grid */
+  min-height: 300px; /* Consistent height */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dress-card-state:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.dress-card-state img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+  margin-bottom: 16px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.dress-name-state {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.dress-desc-state {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .banner-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .dress-showcase-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-banner-showcase {
+    padding: 20px;
+    margin: 20px;
+  }
+  .dress-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .banner-content {
+    grid-template-columns: 1fr;
+    padding: 40px 15px;
+  }
+}
+
+/* GenZ Banner View Styles */
+.genz-banner {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #f0e6ff, #d8eaff);
+  box-shadow: 0 8px 24px rgba(110, 80, 240, 0.25);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.genz-card {
+  background: #fff;
+  border-radius: 18px;
+  width: 100%; /* Use full width of grid cell */
+  min-height: 320px; /* Consistent height */
+  box-shadow: 0 4px 16px rgba(123, 111, 252, 0.3);
+  text-align: center;
+  padding: 14px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.genz-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(110, 80, 255, 0.5);
+}
+
+.genz-card img {
+  width: 100%;
+  border-radius: 16px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  margin-bottom: 14px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #5533ff;
+  margin-bottom: 6px;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #7f7f8c;
+}
+
+@media (max-width: 992px) {
+  .genz-banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .genz-banner {
+    grid-template-columns: 1fr;
+    padding: 20px 15px;
+  }
+  .genz-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

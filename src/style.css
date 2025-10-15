@@ -217,7 +217,7 @@ body {
 }
 
 .animated-card {
-  background: linear-gradient(135deg, #b98c75, #9a6f5a);
+  background: linear-gradient(135deg, #ffffff, #9a9998);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   height: 500px;

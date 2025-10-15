@@ -74,8 +74,8 @@ const statesData = [
     {
       name: 'Karnataka',
       code: 'KA',
-      thumb: '/photos/karnataka.png',
-      image: '/photos/karnataka.png',
+      thumb: '/photos/karnataka.jpg',
+      image: '/photos/karnataka.jpg',
       clothes: [
         {
           name: 'Mysore Silk Saree',
@@ -110,8 +110,8 @@ const statesData = [
     {
       name: 'West Bengal',
       code: 'WB',
-      thumb: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop',
+      thumb: '/photos/west_bengol.jpg',
+      image: '/photos/west_bengol.jpg',
       clothes: [
         {
           name: 'Bengali Saree',
@@ -200,8 +200,8 @@ const statesData = [
     {
       name: 'Odisha',
       code: 'OD',
-      thumb: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop',
+      thumb: '/photos/orrisa.jpg',
+      image: '/photos/orrisa.jpg',
       clothes: [
         {
           name: 'Odia Saree',
@@ -236,8 +236,8 @@ const statesData = [
     {
       name: 'Telangana',
       code: 'TG',
-      thumb: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop',
+      thumb: '/photos/telangana.jpg',
+      image: '/photos/telangana.jpg',
       clothes: [
         {
           name: 'Hyderabad Saree',
@@ -380,8 +380,8 @@ const statesData = [
     {
       name: 'Delhi',
       code: 'DL',
-      thumb: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop',
+      thumb: '/photos/delhi.png',
+      image: '/photos/delhi.png',
       clothes: [
         {
           name: 'Delhi Saree',
@@ -416,8 +416,8 @@ const statesData = [
     {
       name: 'Manipur',
       code: 'MN',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/manipur.jpg',
+      image: '/photos/manipur.jpg',
       clothes: [
         {
           name: 'Phanek',
@@ -452,8 +452,8 @@ const statesData = [
     {
       name: 'Mizoram',
       code: 'MZ',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/mizoram.jpg',
+      image: '/photos/mizoram.jpg',
       clothes: [
         {
           name: 'Puan',
@@ -488,8 +488,8 @@ const statesData = [
     {
       name: 'Tripura',
       code: 'TR',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/tripura.jpg',
+      image: '/photos/tripura.jpg',
       clothes: [
         {
           name: 'Risa & Rignai',
