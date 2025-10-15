@@ -20,7 +20,7 @@ const ContactPage = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginBottom: '40px' }}>
           <div className="card" style={{ padding: '30px', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--accent)', marginBottom: '15px' }}>Email Us</h3>
-            <p style={{ color: '#e6eef8', marginBottom: '10px' }}>For general inquiries:</p>
+            <p style={{ color: 'grey', marginBottom: '10px' }}>For general inquiries:</p>
             <a href="mailto:info@freakx.com" style={{ color: 'var(--accent)', textDecoration: 'none' }}>
               info@freakx.com
             </a>
@@ -28,7 +28,7 @@ const ContactPage = () => {
 
           <div className="card" style={{ padding: '30px', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--accent)', marginBottom: '15px' }}>Follow Us</h3>
-            <p style={{ color: '#e6eef8', marginBottom: '15px' }}>Stay connected on social media</p>
+            <p style={{ color: 'grey', marginBottom: '15px' }}>Stay connected on social media</p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
               <a href="#" style={{ color: 'var(--accent)', textDecoration: 'none' }}>Instagram</a>
               <a href="#" style={{ color: 'var(--accent)', textDecoration: 'none' }}>Twitter</a>
@@ -43,7 +43,7 @@ const ContactPage = () => {
           </h3>
           <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#e6eef8' }}>Name</label>
+              <label style={{ display: 'block', marginBottom: '8px', color: 'black' }}>Name</label>
               <input 
                 type="text" 
                 style={{
@@ -59,7 +59,7 @@ const ContactPage = () => {
               />
             </div>
             <div>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#e6eef8' }}>Email</label>
+              <label style={{ display: 'block', marginBottom: '8px', color: 'black' }}>Email</label>
               <input 
                 type="email" 
                 style={{
@@ -75,7 +75,7 @@ const ContactPage = () => {
               />
             </div>
             <div>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#e6eef8' }}>Message</label>
+              <label style={{ display: 'block', marginBottom: '8px', color: 'black' }}>Message</label>
               <textarea 
                 rows="5"
                 style={{

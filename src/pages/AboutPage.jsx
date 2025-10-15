@@ -15,7 +15,7 @@ const AboutPage = () => {
         </div>
 
         <div style={{ lineHeight: '1.8', fontSize: '1.1rem' }}>
-          <p style={{ marginBottom: '20px', color: '#e6eef8' }}>
+          <p style={{ marginBottom: '20px', color: 'grey' }}>
             Welcome to FReakX, your gateway to exploring the rich and diverse traditional clothing heritage of India. 
             Our platform showcases the beautiful cultural traditions and authentic attire from different states across India.
           </p>
@@ -23,7 +23,7 @@ const AboutPage = () => {
           <h2 style={{ color: 'var(--accent)', marginTop: '30px', marginBottom: '15px' }}>
             Our Mission
           </h2>
-          <p style={{ marginBottom: '20px', color: '#e6eef8' }}>
+          <p style={{ marginBottom: '20px', color: 'grey' }}>
             To preserve and celebrate India's incredible textile heritage by providing an interactive platform 
             where people can discover, learn about, and appreciate the traditional clothing from various Indian states.
           </p>
@@ -31,7 +31,7 @@ const AboutPage = () => {
           <h2 style={{ color: 'var(--accent)', marginTop: '30px', marginBottom: '15px' }}>
             What We Offer
           </h2>
-          <ul style={{ marginBottom: '20px', color: '#e6eef8', paddingLeft: '20px' }}>
+          <ul style={{ marginBottom: '20px', color: 'grey', paddingLeft: '20px' }}>
             <li>Comprehensive collection of traditional Indian clothing</li>
             <li>Detailed information about each state's cultural heritage</li>
             <li>High-quality images showcasing authentic attire</li>
@@ -41,7 +41,7 @@ const AboutPage = () => {
           <h2 style={{ color: 'var(--accent)', marginTop: '30px', marginBottom: '15px' }}>
             Cultural Heritage
           </h2>
-          <p style={{ marginBottom: '20px', color: '#e6eef8' }}>
+          <p style={{ marginBottom: '20px', color: 'grey' }}>
             From the vibrant Ghagra Cholis of Rajasthan to the elegant Kanchipuram sarees of Tamil Nadu, 
             each state in India has its unique textile traditions that reflect its history, geography, and culture. 
             FReakX brings these traditions to life through our carefully curated collection.

@@ -68,21 +68,21 @@ const GridView = () => {
       id: 1,
       name: 'Regal Lehenga',
       description: 'Golden embellishments',
-      image: 'https://user-gen-media-assets.s3.amazonaws.com/seedream_images/534dce20-18fa-4904-83f2-d7e13aa727f2.png',
+      image: '/photos/Lehenga.jpeg',
       alt: 'Lehenga'
     },
     {
       id: 2,
       name: 'Classic Saree',
       description: 'Silk border elegance',
-      image: 'https://user-gen-media-assets.s3.amazonaws.com/seedream_images/534dce20-18fa-4904-83f2-d7e13aa727f2.png',
+      image: '/photos/Classic_Saree.jpeg',
       alt: 'Saree'
     },
     {
       id: 3,
-      name: 'Modern Half-Saree',
+      name: 'Modern Saree',
       description: 'South Indian flair',
-      image: 'https://user-gen-media-assets.s3.amazonaws.com/seedream_images/534dce20-18fa-4904-83f2-d7e13aa727f2.png',
+      image: '/photos/Modern_Saree.jpeg',
       alt: 'Half Saree'
     }
   ];

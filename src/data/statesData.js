@@ -128,8 +128,8 @@ const statesData = [
     {
       name: 'Maharashtra',
       code: 'MH',
-      thumb: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop',
+      thumb: '/photos/Maharashtra.jpeg',
+      image: '/photos/Maharashtra.jpeg',
       clothes: [
         {
           name: 'Nauvari Saree',
@@ -218,8 +218,8 @@ const statesData = [
     {
       name: 'Andhra Pradesh',
       code: 'AP',
-      thumb: '/photos/andhra_pradesh.png',
-      image: '/photos/andhra_pradesh.png',
+      thumb: '/photos/Andhra_Pradesh.jpeg',
+      image: '/photos/Andhra_Pradesh.jpeg',
       clothes: [
         {
           name: 'Kalamkari Saree',
@@ -308,8 +308,8 @@ const statesData = [
     {
       name: 'Jharkhand',
       code: 'JH',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/jharkhand.jpeg',
+      image: '/photos/jharkhand.jpeg',
       clothes: [
         {
           name: 'Tussar Silk Saree',
@@ -398,8 +398,8 @@ const statesData = [
     {
       name: 'Goa',
       code: 'GA',
-      thumb: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop',
+      thumb: '/photos/goa.jpeg',
+      image: '/photos/goa.jpeg',
       clothes: [
         {
           name: 'Goan Saree',
@@ -416,8 +416,8 @@ const statesData = [
     {
       name: 'Manipur',
       code: 'MN',
-      thumb: '/photos/manipur.jpg',
-      image: '/photos/manipur.jpg',
+      thumb: '/photos/Manipur.jpeg',
+      image: '/photos/Manipur.jpeg',
       clothes: [
         {
           name: 'Phanek',
