@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="nav-container">
         <Link to="/" className="nav-brand">
           <img src="/photos/logo.png" alt="FReakX Logo" className="nav-logo" />
-          <span>FReakX</span>
+          <span>FREAKX</span>
         </Link>
         
         {/* Search and Filter Section */}

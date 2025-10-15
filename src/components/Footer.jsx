@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-brand">
               <img src="/photos/logo.png" alt="FReakX Logo" className="footer-logo" />
-              <h3>FReakX</h3>
+              <h3>FREAKX</h3>
             </div>
             <p className="footer-description">
               Explore the rich cultural heritage of every Indian state through their traditional clothing and fashion.
