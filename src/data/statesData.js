@@ -74,8 +74,8 @@ const statesData = [
     {
       name: 'Karnataka',
       code: 'KA',
-      thumb: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop',
+      thumb: '/photos/karnataka.png',
+      image: '/photos/karnataka.png',
       clothes: [
         {
           name: 'Mysore Silk Saree',
@@ -92,8 +92,8 @@ const statesData = [
     {
       name: 'Gujarat',
       code: 'GJ',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/GUJRAT.png',
+      image: '/photos/GUJRAT.png',
       clothes: [
         {
           name: 'Chaniya Choli',
@@ -146,8 +146,8 @@ const statesData = [
     {
       name: 'Assam',
       code: 'AS',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/assam.jpg',
+      image: 'photos/assam.jpg',
       clothes: [
         {
           name: 'Mekhela Chador',
@@ -164,8 +164,8 @@ const statesData = [
     {
       name: 'Himachal Pradesh',
       code: 'HP',
-      thumb: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop',
+      thumb: '/photos/Himachal_pardesh.jpg',
+      image: '/photos/Himachal_pardesh.jpg',
       clothes: [
         {
           name: 'Himachali Ghagra Choli',
@@ -182,8 +182,8 @@ const statesData = [
     {
       name: 'Jammu & Kashmir',
       code: 'JK',
-      thumb: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop',
+      thumb: '/photos/jammu_&_kasmir.png',
+      image: '/photos/jammu_&_kasmir.png',
       clothes: [
         {
           name: 'Pheran',
@@ -218,8 +218,8 @@ const statesData = [
     {
       name: 'Andhra Pradesh',
       code: 'AP',
-      thumb: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop',
+      thumb: '/photos/andhra_pradesh.png',
+      image: '/photos/andhra_pradesh.png',
       clothes: [
         {
           name: 'Kalamkari Saree',
@@ -272,8 +272,8 @@ const statesData = [
     {
       name: 'Madhya Pradesh',
       code: 'MP',
-      thumb: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop',
+      thumb: '/photos/MP.png',
+      image: '/photos/MP.png',
       clothes: [
         {
           name: 'Chanderi Saree',
@@ -290,8 +290,8 @@ const statesData = [
     {
       name: 'Bihar',
       code: 'BR',
-      thumb: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop',
+      thumb: '/photos/bihar.jpg',
+      image: '/photos/bihar.jpg',
       clothes: [
         {
           name: 'Bhagalpuri Silk Saree',
@@ -326,8 +326,8 @@ const statesData = [
     {
       name: 'Chhattisgarh',
       code: 'CG',
-      thumb: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop',
+      thumb: '/photos/chhattisgarh.jpg',
+      image: '/photos/chhattisgarh.jpg',
       clothes: [
         {
           name: 'Kosa Silk Saree',
@@ -344,8 +344,8 @@ const statesData = [
     {
       name: 'Haryana',
       code: 'HR',
-      thumb: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop',
+      thumb: '/photos/haryana.jpg',
+      image: '/photos/haryana.jpg',
       clothes: [
         {
           name: 'Phulkari Dupatta',
@@ -362,8 +362,8 @@ const statesData = [
     {
       name: 'Uttarakhand',
       code: 'UK',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/uttrakhand.jpg',
+      image: '/photos/uttrakhand.jpg',
       clothes: [
         {
           name: 'Uttarakhand Saree',
@@ -470,8 +470,8 @@ const statesData = [
     {
       name: 'Nagaland',
       code: 'NL',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/nagaland.jpg',
+      image: '/photos/nagaland.jpg',
       clothes: [
         {
           name: 'Naga Skirt',
@@ -506,8 +506,8 @@ const statesData = [
     {
       name: 'Sikkim',
       code: 'SK',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/sikkim.jpg',
+      image: '/photos/sikkim.jpg',
       clothes: [
         {
           name: 'Bakhu',
@@ -524,8 +524,8 @@ const statesData = [
     {
       name: 'Arunachal Pradesh',
       code: 'AR',
-      thumb: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
+      thumb: '/photos/arunachal_pradesh.jpg',
+      image: '/photos/arunachal_pradesh.jpg',
       clothes: [
         {
           name: 'Gale',

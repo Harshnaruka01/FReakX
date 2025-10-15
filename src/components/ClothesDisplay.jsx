@@ -18,16 +18,6 @@ const ClothesDisplay = ({ selectedState }) => {
             <div className="card-body">
               <h3>{cloth.name}</h3>
               <p className="desc">{cloth.description}</p>
-              <div className="card-actions">
-                <button
-                  className="btn add-to-cart"
-                  aria-label={`Add ${cloth.name} to cart`}
-                  disabled
-                  title="Add to cart (disabled until backend is available)"
-                >
-                  Add to Cart
-                </button>
-              </div>
             </div>
           </div>
         ))}

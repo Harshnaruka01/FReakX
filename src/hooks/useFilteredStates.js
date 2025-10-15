@@ -71,6 +71,9 @@ export const useFilteredStates = () => {
       );
     }
 
+    // Sort states alphabetically by name
+    filtered.sort((a, b) => a.name.localeCompare(b.name));
+
     return filtered;
   }, [searchQuery, filterRegion]);
 
