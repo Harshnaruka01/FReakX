@@ -11,9 +11,9 @@ const ProductCard = ({ product }) => {
           <h3 className="product-name">{product.name}</h3>
           <p className="product-category">{product.category}</p>
           <div className="product-price">
-            <span className="current-price">${product.price.toFixed(2)}</span>
+            <span className="current-price">₹{product.price.toFixed(2)}</span>
             {product.originalPrice && (
-              <span className="original-price">${product.originalPrice.toFixed(2)}</span>
+              <span className="original-price">₹{product.originalPrice.toFixed(2)}</span>
             )}
           </div>
         </div>

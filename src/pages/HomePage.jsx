@@ -10,21 +10,21 @@ import './HomePage.css';
 const HomePage = () => {
   // Sample product data - replace with your actual data
   const newArrivals = [
-    { id: 1, name: 'Relaxed Short Full Slee...', category: 'Clothes', price: 45.00, originalPrice: 12.00, image: '/photos/relaxed-short-full-sleeve.jpeg' },
-    { id: 2, name: 'Girls Pnk Embro Desig...', category: 'Clothes', price: 61.00, originalPrice: 9.00, image: '/photos/girls-pnk-embro-design.jpeg' },
-    { id: 3, name: 'Black Floral Wrap Midi...', category: 'Clothes', price: 76.00, originalPrice: 25.00, image: '/photos/black-floral-wrap-midi.jpeg' },
+    { id: 1, name: 'Mens', category: 'Clothes', price: 450.00, originalPrice: 512.00, image: './photos/GenZ_outfit.jpeg' },
+    { id: 2, name: 'Girls', category: 'Clothes', price: 600.00, originalPrice: 799.00, image: './photos/GenZ_outfit_G.jpeg' },
+    { id: 3, name: 'Combo Outfit', category: 'Clothes', price: 750.00, originalPrice: 825.00, image: './photos/combo_outfit.jpeg' },
   ];
 
   const trending = [
-    { id: 4, name: 'Running & Trekking Sh...', category: 'Sports', price: 49.00, originalPrice: 15.00, image: '/photos/running-trekking-shoes.jpeg' },
-    { id: 5, name: 'Trekking & Running Sh...', category: 'Sports', price: 78.00, originalPrice: 36.00, image: '/photos/trekking-running-shoes.jpeg' },
-    { id: 6, name: 'Womens Party Wear S...', category: 'Party Wear', price: 94.00, originalPrice: 42.00, image: '/photos/womens-party-wear-s.jpeg' },
+    { id: 4, name: 'Running & Trekking Sh...', category: 'Sports', price: 490.00, originalPrice: 515.00, image: '/photos/running-trekking-shoes.jpg' },
+    { id: 5, name: 'Trekking & Running Sh...', category: 'Sports', price: 780.00, originalPrice: 836.00, image: '/photos/trekking-running-shoes.jpg' },
+    { id: 6, name: 'Womens Party Wear S...', category: 'Party Wear', price: 940.00, originalPrice: 1142.00, image: '/photos/womens-party-wear-s.jpg' },
   ];
 
   const topRated = [
-    { id: 7, name: 'Pocket Watch Leather ...', category: 'Watches', price: 50.00, originalPrice: 94.00, image: '/photos/pocket-watch-leather.jpeg' },
-    { id: 8, name: 'Silver Deer Heart Neck...', category: 'Jewellery', price: 84.00, originalPrice: 30.00, image: '/photos/silver-deer-heart-necklace.jpeg' },
-    { id: 9, name: 'Titan 100 MI Womens ...', category: 'Perfume', price: 42.00, originalPrice: 10.00, image: '/photos/titan-100-mi-womens.jpeg' },
+    { id: 7, name: 'Pocket Watch Leather ...', category: 'Watches', price: 500.00, originalPrice: 694.00, image: '/photos/pocket-watch-leather.jpg' },
+    { id: 8, name: 'Silver Deer Heart Neck...', category: 'Jewellery', price: 840.00, originalPrice: 1130.00, image: '/photos/silver-deer-heart-necklace.jpg' },
+    { id: 9, name: 'Titan 100 MI Womens ...', category: 'Perfume', price: 420.00, originalPrice: 550.00, image: '/photos/perfume.jpg' },
   ];
 
   return (
@@ -37,7 +37,7 @@ const HomePage = () => {
             <Sidebar />
             <div className="product-sections-wrapper">
               <section className="product-section">
-                <h2>New Arrivals</h2>
+                <h2>GenZ</h2>
                 <div className="product-grid">
                   {newArrivals.map(product => (
                     <ProductCard key={product.id} product={product} />
