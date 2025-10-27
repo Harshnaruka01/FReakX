@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './AnimatedCard.css';
-
+ 
 const AnimatedCard = ({ items, interval = 5000 }) => {
   const [activePage, setActivePage] = useState('grid');
 
@@ -9,54 +9,46 @@ const AnimatedCard = ({ items, interval = 5000 }) => {
     const cycle = ['grid', 'banner', 'genz'];
     let currentIndex = 0;
 
-    console.log('Starting cycle with:', cycle);
-
     const timer = setInterval(() => {
       currentIndex = (currentIndex + 1) % cycle.length;
-      const nextPage = cycle[currentIndex];
-      console.log('Switching to page:', nextPage, 'at index:', currentIndex);
-      setActivePage(nextPage);
+      setActivePage(cycle[currentIndex]);
     }, interval);
 
     return () => clearInterval(timer);
   }, [interval]);
 
+  const variants = {
+    enter: { opacity: 0, y: 20 },
+    center: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+  };
+
+  const renderContent = () => {
+    switch (activePage) {
+      case 'grid':
+        return <GridView />;
+      case 'banner':
+        return <BannerView />;
+      case 'genz':
+        return <GenZView />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="animated-card-wrapper">
-      <AnimatePresence mode="wait">
-        {activePage === 'grid' && (
-          <motion.div
-            key="grid"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-          >
-            <GridView />
-          </motion.div>
-        )}
-        {activePage === 'banner' && (
-          <motion.div
-            key="banner"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-          >
-            <BannerView />
-          </motion.div>
-        )}
-        {activePage === 'genz' && (
-          <motion.div
-            key="genz"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-          >
-            <GenZView />
-          </motion.div>
-        )}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={activePage}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+        >
+          {renderContent()}
+        </motion.div>
       </AnimatePresence>
     </div>
   );
@@ -116,11 +108,12 @@ const GridView = () => {
       variants={containerVariants}
     >
       <div className="dress-showcase-grid">
-        {dresses.map((dress) => (
+        {dresses.map((dress, index) => (
           <motion.div
             key={dress.id}
             className="dress-item-card"
             variants={itemVariants}
+            style={{ '--i': index }}
           >
             <img
               src={dress.image}
@@ -151,8 +144,8 @@ const BannerView = () => {
     <div className="banner-wrapper">
       <div className="banner-bg"></div>
       <div className="banner-content">
-        {stateDresses.map(dress => (
-          <div key={dress.id} className="dress-card-state">
+        {stateDresses.map((dress, index) => (
+          <div key={dress.id} className="dress-card-state" style={{ '--i': index }}>
             <img src={dress.image} alt={dress.alt} />
             <div className="dress-name-state">{dress.name}</div>
             <div className="dress-desc-state">{dress.description}</div>
@@ -190,8 +183,8 @@ const GenZView = () => {
 
   return (
     <div className="genz-banner">
-      {genzItems.map(item => (
-        <div key={item.id} className="genz-card">
+      {genzItems.map((item, index) => (
+        <div key={item.id} className="genz-card" style={{ '--i': index }}>
           <img src={item.image} alt={item.alt} />
           <div className="card-title">{item.name}</div>
           <div className="card-subtitle">{item.subtitle}</div>

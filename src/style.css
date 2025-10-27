@@ -58,7 +58,7 @@ body {
 
 .nav-brand:hover {
   color: #b75050;
-  shadow: 0 0 0 2px rgba(255,122,89,0.1);
+  box-shadow: 0 0 0 2px rgba(255,122,89,0.1);
   opacity: 0.8;
 }
 
@@ -229,8 +229,10 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.5s ease;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: floating 3s ease-in-out infinite;
   margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
 .animated-card h3 {
@@ -259,9 +261,10 @@ body {
   transform: translateX(4px);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 /* Home page grid for states */
