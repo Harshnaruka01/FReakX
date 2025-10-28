@@ -25,9 +25,11 @@
 .category-header {
   display: flex;
   justify-content: space-between;
+  padding: 12px 16px;
   align-items: center;
   cursor: pointer;
   font-weight: 600;
+  color: #000000;
 }
 
 .subcategory-list {
@@ -39,9 +41,27 @@
 .subcategory-item {
   margin-bottom: 8px;
   cursor: pointer;
-  color: #555;
+  color: #333333;
 }
 
 .subcategory-item:hover {
-  color: #000;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Ensure all text in sidebar is black */
+.sidebar,
+.sidebar * {
+  color: #000000;
+}
+
+/* Style for the category links */
+.category-link {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+}
+
+.category-link:hover {
+  color: #000000;
 }

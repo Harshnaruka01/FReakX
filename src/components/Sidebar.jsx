@@ -1,15 +1,41 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
   const [openCategories, setOpenCategories] = useState({ Clothes: true });
 
   const categories = [
-    { name: 'Clothes', count: 300, sub: ['Shirt', 'Shorts & Jeans', 'Jacket', 'Dress & Frock'] },
-    { name: 'Footwear', count: 87, sub: [] },
-    { name: 'Jewelry', count: 50, sub: [] },
-    { name: 'Cosmetics', count: 87, sub: [] },
-    { name: 'Glasses', count: 53, sub: [] },
+    { 
+      name: 'Clothes', 
+      count: 300, 
+      sub: ['Shirt', 'Shorts & Jeans', 'Jacket', 'Dress & Frock'],
+      hasSubmenu: true
+    },
+    { 
+      name: 'Footwear', 
+      count: 87, 
+      path: '/footwear',
+      hasSubmenu: false
+    },
+    { 
+      name: 'Jewelry', 
+      count: 50, 
+      sub: [],
+      hasSubmenu: false
+    },
+    { 
+      name: 'Cosmetics', 
+      count: 87, 
+      sub: [],
+      hasSubmenu: false
+    },
+    { 
+      name: 'Glasses', 
+      count: 53, 
+      sub: [],
+      hasSubmenu: false
+    },
   ];
 
   const handleToggle = (categoryName) => {
@@ -25,18 +51,29 @@ const Sidebar = () => {
       <ul className="category-list">
         {categories.map(category => (
           <li key={category.name} className="category-item">
-            <div className="category-header" onClick={() => category.sub && handleToggle(category.name)}>
-              <span>{category.name}</span>
-              {category.sub && <span>{openCategories[category.name] ? '—' : '+'}</span>}
-            </div>
-            {category.sub && openCategories[category.name] && (
-              <ul className="subcategory-list">
-                {category.sub.map(subItem => (
-                  <li key={subItem} className="subcategory-item">
-                    <span>{subItem}</span>
-                  </li>
-                ))}
-              </ul>
+            {category.hasSubmenu ? (
+              <>
+                <div className="category-header" onClick={() => handleToggle(category.name)}>
+                  <span>{category.name}</span>
+                  <span>{openCategories[category.name] ? '—' : '+'}</span>
+                </div>
+                {openCategories[category.name] && (
+                  <ul className="subcategory-list">
+                    {category.sub.map(subItem => (
+                      <li key={subItem} className="subcategory-item">
+                        <span>{subItem}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
+            ) : (
+              <Link to={category.path || '#'} className="category-link">
+                <div className="category-header">
+                  <span>{category.name}</span>
+                  <span>→</span>
+                </div>
+              </Link>
             )}
           </li>
         ))}

@@ -16,9 +16,9 @@ const HomePage = () => {
   ];
 
   const trending = [
-    { id: 4, name: 'Running & Trekking Sh...', category: 'Sports', price: 490.00, originalPrice: 515.00, image: '/photos/running-trekking-shoes.jpg' },
-    { id: 5, name: 'Trekking & Running Sh...', category: 'Sports', price: 780.00, originalPrice: 836.00, image: '/photos/trekking-running-shoes.jpg' },
-    { id: 6, name: 'Womens Party Wear S...', category: 'Party Wear', price: 940.00, originalPrice: 1142.00, image: '/photos/womens-party-wear-s.jpg' },
+    { id: 4, name: 'Rajasthani womens Dress', category: 'clothes', price: 490.00, originalPrice: 515.00, image: '/photos/rajasthani_base.jpeg' },
+    { id: 5, name: 'Rajasthani mens Dress', category: 'clothes', price: 780.00, originalPrice: 836.00, image: '/photos/rajasthani_men_dress.jpeg' },
+    { id: 6, name: 'Footwear', category: 'Footwear', price: 940.00, originalPrice: 1142.00, image: '/photos/rajasthani_juti.jpeg' },
   ];
 
   const topRated = [
