@@ -7,6 +7,7 @@ import AllStatesPage from './pages/AllStatesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import FootwearPage from './pages/FootwearPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/footwear" element={<FootwearPage />} />
+          <Route path="/product/:productId" element={<ProductDetailPage />} />
         </Routes>
       </Router>
     </SearchProvider>

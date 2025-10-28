@@ -8,24 +8,58 @@ import AnimatedCard from '../components/AnimatedCard';
 import './HomePage.css';
 
 const HomePage = () => {
-  // Sample product data - replace with your actual data
-  const newArrivals = [
-    { id: 1, name: 'Mens', category: 'Clothes', price: 450.00, originalPrice: 512.00, image: './photos/GenZ_outfit.jpeg' },
-    { id: 2, name: 'Girls', category: 'Clothes', price: 600.00, originalPrice: 799.00, image: './photos/GenZ_outfit_G.jpeg' },
-    { id: 3, name: 'Combo Outfit', category: 'Clothes', price: 750.00, originalPrice: 825.00, image: './photos/combo_outfit.jpeg' },
+  // Men's and Women's sections
+  const mensSection = [
+    { id: 1, name: 'Casual Shirt', category: 'Men\'s Fashion', image: '/photos/mens_shirt.jpg', price: 799, originalPrice: 999 },
+    { id: 2, name: 'Slim Fit Jeans', category: 'Men\'s Fashion', image: '/photos/mens_jeans.jpg', price: 1299, originalPrice: 1599 },
+    { id: 3, name: 'Sports Shoes', category: 'Men\'s Footwear', image: '/photos/mens_shoes.jpg', price: 1999, originalPrice: 2499 },
+    { id: 4, name: 'Formal Shirt', category: 'Men\'s Fashion', image: '/photos/mens_shirt.jpg', price: 899, originalPrice: 1199 },
+    { id: 5, name: 'Cargo Pants', category: 'Men\'s Fashion', image: '/photos/mens_jeans.jpg', price: 1099, originalPrice: 1399 },
+    { id: 6, name: 'Running Shoes', category: 'Men\'s Footwear', image: '/photos/mens_shoes.jpg', price: 1799, originalPrice: 2299 },
+  ];
+
+  const womensSection = [
+    { id: 7, name: 'Summer Dress', category: 'Women\'s Fashion', image: '/photos/womens_dress.jpg', price: 1299, originalPrice: 1599 },
+    { id: 8, name: 'Designer Handbag', category: 'Women\'s Accessories', image: '/photos/womens_bag.jpg', price: 1599, originalPrice: 1999 },
+    { id: 9, name: 'Casual Sandals', category: 'Women\'s Footwear', image: '/photos/womens_shoes.jpg', price: 899, originalPrice: 1199 },
+    { id: 10, name: 'Evening Gown', category: 'Women\'s Fashion', image: '/photos/womens_dress.jpg', price: 1899, originalPrice: 2299 },
+    { id: 11, name: 'Clutch Purse', category: 'Women\'s Accessories', image: '/photos/womens_bag.jpg', price: 699, originalPrice: 999 },
+    { id: 12, name: 'Heeled Sandals', category: 'Women\'s Footwear', image: '/photos/womens_shoes.jpg', price: 1299, originalPrice: 1599 },
   ];
 
   const trending = [
-    { id: 4, name: 'Rajasthani womens Dress', category: 'clothes', price: 490.00, originalPrice: 515.00, image: '/photos/rajasthani_base.jpeg' },
-    { id: 5, name: 'Rajasthani mens Dress', category: 'clothes', price: 780.00, originalPrice: 836.00, image: '/photos/rajasthani_men_dress.jpeg' },
-    { id: 6, name: 'Footwear', category: 'Footwear', price: 940.00, originalPrice: 1142.00, image: '/photos/rajasthani_juti.jpeg' },
+    { id: 13, name: 'Rajasthani Lehenga', category: 'Ethnic Wear', image: '/photos/rajasthani_base.jpeg', price: 3499, originalPrice: 4299 },
+    { id: 14, name: 'Men\'s Kurta Set', category: 'Ethnic Wear', image: '/photos/rajasthani_men_dress.jpeg', price: 2299, originalPrice: 2999 },
+    { id: 15, name: 'Traditional Juttis', category: 'Footwear', image: '/photos/rajasthani_juti.jpeg', price: 799, originalPrice: 1099 },
+    { id: 16, name: 'Silk Saree', category: 'Ethnic Wear', image: '/photos/rajasthani_base.jpeg', price: 2899, originalPrice: 3499 },
+    { id: 17, name: 'Sherwani Set', category: 'Ethnic Wear', image: '/photos/rajasthani_men_dress.jpeg', price: 4999, originalPrice: 5999 },
+    { id: 18, name: 'Embroidered Mojris', category: 'Footwear', image: '/photos/rajasthani_juti.jpeg', price: 999, originalPrice: 1299 },
   ];
 
   const topRated = [
-    { id: 7, name: 'Pocket Watch Leather ...', category: 'Watches', price: 500.00, originalPrice: 694.00, image: '/photos/pocket-watch-leather.jpg' },
-    { id: 8, name: 'Silver Deer Heart Neck...', category: 'Jewellery', price: 840.00, originalPrice: 1130.00, image: '/photos/silver-deer-heart-necklace.jpg' },
-    { id: 9, name: 'Titan 100 MI Womens ...', category: 'Perfume', price: 420.00, originalPrice: 550.00, image: '/photos/perfume.jpg' },
+    { id: 19, name: 'Leather Watch', category: 'Accessories', price: 2499, originalPrice: 3299, image: '/photos/pocket-watch-leather.jpg' },
+    { id: 20, name: 'Silver Necklace', category: 'Jewelry', price: 1899, originalPrice: 2499, image: '/photos/silver-deer-heart-necklace.jpg' },
+    { id: 21, name: 'Premium Perfume', category: 'Fragrance', price: 1299, originalPrice: 1699, image: '/photos/perfume.jpg' },
+    { id: 22, name: 'Sunglasses', category: 'Accessories', price: 1499, originalPrice: 1999, image: '/photos/pocket-watch-leather.jpg' },
+    { id: 23, name: 'Diamond Ring', category: 'Jewelry', price: 8999, originalPrice: 11999, image: '/photos/silver-deer-heart-necklace.jpg' },
+    { id: 24, name: 'Body Mist Set', category: 'Fragrance', price: 999, originalPrice: 1499, image: '/photos/perfume.jpg' },
   ];
+
+  // State to track visible items count for each section
+  const [visibleCounts, setVisibleCounts] = React.useState({
+    mens: 4,
+    womens: 4,
+    trending: 4,
+    topRated: 4
+  });
+
+  // Function to load more items
+  const loadMore = (section) => {
+    setVisibleCounts(prev => ({
+      ...prev,
+      [section]: prev[section] + 4
+    }));
+  };
 
   return (
     <div className="app-root">
@@ -35,29 +69,82 @@ const HomePage = () => {
           <AnimatedCard />
           <div className="content-with-sidebar">
             <Sidebar />
-            <div className="product-sections-wrapper">
+            <div className="content">
+              {/* Men's Section */}
               <section className="product-section">
-                <h2>GenZ</h2>
+                <div className="section-header">
+                  <h2>Men's Collection</h2>
+                  {visibleCounts.mens < mensSection.length && (
+                    <button 
+                      className="see-more-btn"
+                      onClick={() => loadMore('mens')}
+                    >
+                      See More
+                    </button>
+                  )}
+                </div>
                 <div className="product-grid">
-                  {newArrivals.map(product => (
+                  {mensSection.slice(0, visibleCounts.mens).map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
                 </div>
               </section>
 
+              {/* Women's Section */}
               <section className="product-section">
-                <h2>Trending</h2>
+                <div className="section-header">
+                  <h2>Women's Collection</h2>
+                  {visibleCounts.womens < womensSection.length && (
+                    <button 
+                      className="see-more-btn"
+                      onClick={() => loadMore('womens')}
+                    >
+                      See More
+                    </button>
+                  )}
+                </div>
                 <div className="product-grid">
-                  {trending.map(product => (
+                  {womensSection.slice(0, visibleCounts.womens).map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
                 </div>
               </section>
 
+              {/* Trending Section */}
               <section className="product-section">
-                <h2>Top Rated</h2>
+                <div className="section-header">
+                  <h2>Trending Now</h2>
+                  {visibleCounts.trending < trending.length && (
+                    <button 
+                      className="see-more-btn"
+                      onClick={() => loadMore('trending')}
+                    >
+                      See More
+                    </button>
+                  )}
+                </div>
                 <div className="product-grid">
-                  {topRated.map(product => (
+                  {trending.slice(0, visibleCounts.trending).map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
+              </section>
+
+              {/* Top Rated Section */}
+              <section className="product-section">
+                <div className="section-header">
+                  <h2>Top Rated</h2>
+                  {visibleCounts.topRated < topRated.length && (
+                    <button 
+                      className="see-more-btn"
+                      onClick={() => loadMore('topRated')}
+                    >
+                      See More
+                    </button>
+                  )}
+                </div>
+                <div className="product-grid">
+                  {topRated.slice(0, visibleCounts.topRated).map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
                 </div>
