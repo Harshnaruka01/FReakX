@@ -31,7 +31,7 @@ const HomePage = () => {
     { id: 13, name: 'Rajasthani Lehenga', category: 'Ethnic Wear', image: '/photos/rajasthani_base.jpeg', price: 3499, originalPrice: 4299 },
     { id: 14, name: 'Men\'s Kurta Set', category: 'Ethnic Wear', image: '/photos/rajasthani_men_dress.jpeg', price: 2299, originalPrice: 2999 },
     { id: 15, name: 'Traditional Juttis', category: 'Footwear', image: '/photos/rajasthani_juti.jpeg', price: 799, originalPrice: 1099 },
-    { id: 16, name: 'Silk Saree', category: 'Ethnic Wear', image: '/photos/rajasthani_base.jpeg', price: 2899, originalPrice: 3499 },
+    { id: 16, name: 'Rajasthani jewelry', category: 'Ethnic Wear', image: '/photos/rajasthani_base.jpeg', price: 2899, originalPrice: 3499 },
     { id: 17, name: 'Sherwani Set', category: 'Ethnic Wear', image: '/photos/rajasthani_men_dress.jpeg', price: 4999, originalPrice: 5999 },
     { id: 18, name: 'Embroidered Mojris', category: 'Footwear', image: '/photos/rajasthani_juti.jpeg', price: 999, originalPrice: 1299 },
   ];
