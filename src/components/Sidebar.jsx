@@ -14,27 +14,76 @@ const Sidebar = () => {
     },
     { 
       name: 'Footwear', 
-      count: 87, 
-      path: '/footwear',
-      hasSubmenu: false
+      count: 200, 
+      sub: [
+        'Sports Shoes',
+        'Casual Shoes',
+        'Formal Shoes',
+        'Sneakers',
+        'Sandals',
+        'Slippers',
+        'Boots',
+        'Loafers',
+      ],
+      hasSubmenu: true
     },
     { 
       name: 'Jewelry', 
       count: 50, 
-      sub: [],
-      hasSubmenu: false
+      sub: [
+        'Rajasthani Kundan',
+        'Meenakari Jewelry',
+        'Thewa Jewelry',
+        'Lac Jewelry',
+        'Silver Tribal Jewelry',
+        'Polki Jewelry',
+        'Navratna Jewelry',
+        'Chandbali Earrings',
+        'Hathphool',
+        'Baju Bandh',
+        'Borla Maang Tikka',
+        'Rajasthani Choker'
+      ],
+      hasSubmenu: true
     },
     { 
       name: 'Cosmetics', 
-      count: 87, 
-      sub: [],
-      hasSubmenu: false
+      count: 150, 
+      sub: [
+        'Face Makeup',
+        'Lipstick & Gloss',
+        'Eye Makeup',
+        'Nail Polish',
+        'Makeup Brushes',
+        'Face Care',
+        'Body Care',
+        'Hair Care',
+        'Fragrances',
+        'Makeup Kits',
+        'Beauty Tools',
+        'Men\'s Grooming',
+        'Ayurvedic Products',
+        'Organic & Natural',
+      ],
+      hasSubmenu: true
     },
     { 
       name: 'Glasses', 
-      count: 53, 
-      sub: [],
-      hasSubmenu: false
+      count: 120, 
+      sub: [
+        'Sunglasses',
+        'Reading Glasses',
+        'Computer Glasses',
+        'Blue Light Glasses',
+        'Prescription Glasses',
+        'Sports Glasses',
+        'Polarized Sunglasses',
+        'Gradient Lenses',
+        'Designer Frames',
+        'Kids\' Glasses',
+        'Safety Glasses'
+      ],
+      hasSubmenu: true
     },
   ];
 
