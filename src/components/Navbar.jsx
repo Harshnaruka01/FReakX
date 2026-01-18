@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSearch } from '../context/SearchContext';
+import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { searchQuery, setSearchQuery, setIsFilterOpen } = useSearch();
+  const { currentUser, logout } = useAuth();
+  const { getTotalItems } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -24,6 +29,15 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate('/');
+    } catch (error) {
+      console.error('Failed to logout:', error);
+    }
   };
 
   return (
@@ -67,6 +81,41 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
+          <Link
+            to="/cart"
+            className={`nav-link cart-link ${location.pathname === '/cart' ? 'active' : ''}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            Cart
+            {getTotalItems() > 0 && (
+              <span className="cart-badge">{getTotalItems()}</span>
+            )}
+          </Link>
+          {currentUser ? (
+            <>
+              <Link
+                to="/account"
+                className={`nav-link ${location.pathname === '/account' ? 'active' : ''}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                My Account
+              </Link>
+              <button onClick={handleLogout} className="nav-link logout-btn">
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link
+              to="/login"
+              className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Login
+            </Link>
+          )}
         </div>
         
         <div className="nav-toggle" onClick={toggleMobileMenu}>

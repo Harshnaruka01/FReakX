@@ -1,16 +1,46 @@
-# React + Vite
+# FReakX - Indian Cultural Fashion E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite application showcasing authentic Indian cultural attire and fashion from different states.
 
-Currently, two official plugins are available:
+## Firebase Authentication Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**IMPORTANT:** Before Firebase login will work, you must enable Authentication in your Firebase Console:
 
-## React Compiler
+### Steps to Enable Firebase Authentication:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Select your project: **freakx-auth**
+3. Click on **Authentication** in the left sidebar
+4. Click **Get Started** (if you haven't enabled it yet)
+5. Go to the **Sign-in method** tab
+6. Enable the following sign-in providers:
+   - **Email/Password**: Click on it → Enable → Save
+   - **Google**: Click on it → Enable → Add your project support email → Save
 
-## Expanding the ESLint configuration
+### Authorized Domains:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Make sure your local development domain is authorized:
+- Go to Authentication → Settings → Authorized domains
+- Add `localhost` if it's not already there (it should be by default)
+
+## Running the Project
+
+```bash
+npm install
+npm run dev
+```
+
+## Features
+
+- Browse products by Indian states
+- User authentication (Email/Password and Google Sign-in)
+- Product search and filtering
+- Responsive design
+
+## Troubleshooting
+
+If login is not working:
+1. Check browser console for error messages
+2. Verify Authentication is enabled in Firebase Console
+3. Check that your Firebase config in `src/firebase.js` is correct
+4. Ensure authorized domains include your current domain
