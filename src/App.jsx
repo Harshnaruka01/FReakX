@@ -10,6 +10,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import FootwearPage from './pages/FootwearPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import CategoryProductsPage from './pages/CategoryProductsPage';
 import LoginPage from './pages/LoginPage';
 import UserAccountPage from './pages/UserAccountPage';
 import CartPage from './pages/CartPage';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/footwear" element={<FootwearPage />} />
+            <Route path="/category/:categoryName" element={<CategoryProductsPage />} />
             <Route path="/product/:productId" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/login" element={<LoginPage />} />

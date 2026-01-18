@@ -1,3 +1,10 @@
+.container.home-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
 .home-page .main-content {
   width: 100%;
   display: flex;
@@ -8,6 +15,13 @@
   display: flex;
   gap: 24px;
   margin-top: 24px;
+  width: 100%;
+}
+
+.home-page .content {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
 }
 
 .product-sections-wrapper {
@@ -62,9 +76,8 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 16px;
+  margin: 0;
+  padding: 0;
 }
 
 .product-card {

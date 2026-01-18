@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import CategoryCard from '../components/CategoryCard';
-import Sidebar from '../components/Sidebar';
-import AnimatedCard from '../components/AnimatedCard';
-import './HomePage.css';
+import ProductCard from '../components/ProductCard';
+import './CategoryProductsPage.css';
 
-const HomePage = () => {
-  // Men's Collection - Categories with multiple items
+// Import category data structure from HomePage
+// This would ideally come from a shared data source or API
+const getAllCategories = () => {
   const mensSection = [
     {
       name: 'Casual Shirt',
@@ -68,7 +67,6 @@ const HomePage = () => {
     },
   ];
 
-  // Women's Collection - Categories with multiple items
   const womensSection = [
     {
       name: 'Summer Dress',
@@ -127,7 +125,6 @@ const HomePage = () => {
     },
   ];
 
-  // Trending Now - Categories with multiple items
   const trending = [
     {
       name: 'Rajasthani Lehenga',
@@ -177,7 +174,6 @@ const HomePage = () => {
     },
   ];
 
-  // Top Rated - Categories with multiple items
   const topRated = [
     {
       name: 'Leather Watch',
@@ -235,117 +231,58 @@ const HomePage = () => {
     },
   ];
 
-  // State to track visible items count for each section
-  const [visibleCounts, setVisibleCounts] = React.useState({
-    mens: 4,
-    womens: 4,
-    trending: 4,
-    topRated: 4
-  });
+  return [...mensSection, ...womensSection, ...trending, ...topRated];
+};
 
-  // Function to load more items
-  const loadMore = (section) => {
-    setVisibleCounts(prev => ({
-      ...prev,
-      [section]: prev[section] + 4
-    }));
-  };
+const CategoryProductsPage = () => {
+  const { categoryName } = useParams();
+  const allCategories = getAllCategories();
+  
+  // Decode category name from URL (replace hyphens with spaces)
+  const decodedCategoryName = decodeURIComponent(categoryName).replace(/-/g, ' ');
+  
+  // Find the category by matching name
+  const category = allCategories.find(cat => 
+    cat.name.toLowerCase() === decodedCategoryName.toLowerCase()
+  );
+
+  if (!category) {
+    return (
+      <div className="app-root">
+        <Navbar />
+        <div className="category-not-found">
+          <h2>Category not found</h2>
+          <Link to="/" className="back-to-home">Back to Home</Link>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  const products = category.items || [];
 
   return (
     <div className="app-root">
       <Navbar />
-      <main className="container home-page">
-        <div className="main-content">
-          <AnimatedCard />
-          <div className="content-with-sidebar">
-            <Sidebar />
-            <div className="content">
-              {/* Men's Section */}
-              <section className="product-section">
-                <div className="section-header">
-                  <h2>Men's Collection</h2>
-                  {visibleCounts.mens < mensSection.length && (
-                    <button 
-                      className="see-more-btn"
-                      onClick={() => loadMore('mens')}
-                    >
-                      See More
-                    </button>
-                  )}
-                </div>
-                <div className="product-grid">
-                  {mensSection.slice(0, visibleCounts.mens).map((category, idx) => (
-                    <CategoryCard key={category.name || idx} category={category} />
-                  ))}
-                </div>
-              </section>
-
-              {/* Women's Section */}
-              <section className="product-section">
-                <div className="section-header">
-                  <h2>Women's Collection</h2>
-                  {visibleCounts.womens < womensSection.length && (
-                    <button 
-                      className="see-more-btn"
-                      onClick={() => loadMore('womens')}
-                    >
-                      See More
-                    </button>
-                  )}
-                </div>
-                <div className="product-grid">
-                  {womensSection.slice(0, visibleCounts.womens).map((category, idx) => (
-                    <CategoryCard key={category.name || idx} category={category} />
-                  ))}
-                </div>
-              </section>
-
-              {/* Trending Section */}
-              <section className="product-section">
-                <div className="section-header">
-                  <h2>Trending Now</h2>
-                  {visibleCounts.trending < trending.length && (
-                    <button 
-                      className="see-more-btn"
-                      onClick={() => loadMore('trending')}
-                    >
-                      See More
-                    </button>
-                  )}
-                </div>
-                <div className="product-grid">
-                  {trending.slice(0, visibleCounts.trending).map((category, idx) => (
-                    <CategoryCard key={category.name || idx} category={category} />
-                  ))}
-                </div>
-              </section>
-
-              {/* Top Rated Section */}
-              <section className="product-section">
-                <div className="section-header">
-                  <h2>Top Rated</h2>
-                  {visibleCounts.topRated < topRated.length && (
-                    <button 
-                      className="see-more-btn"
-                      onClick={() => loadMore('topRated')}
-                    >
-                      See More
-                    </button>
-                  )}
-                </div>
-                <div className="product-grid">
-                  {topRated.slice(0, visibleCounts.topRated).map((category, idx) => (
-                    <CategoryCard key={category.name || idx} category={category} />
-                  ))}
-                </div>
-              </section>
-            </div>
-          </div>
+      <div className="category-products-page">
+        <div className="page-header">
+          <h1>{category.name}</h1>
+          <p className="category-description">{category.category} - {products.length} products available</p>
         </div>
-      </main>
+        
+        <div className="product-grid">
+          {products.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+        
+        <div className="back-to-home-section">
+          <Link to="/" className="back-to-home-btn">← Back to Home</Link>
+        </div>
+      </div>
       <Footer />
     </div>
   );
 };
 
-export default HomePage;
+export default CategoryProductsPage;
