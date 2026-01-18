@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   // Sign up with email and password
-  const signup = async (email, password) => {
+  const signup = async (email, password, username = '') => {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     // Create user profile in Firestore
     const userDocRef = doc(db, 'users', userCredential.user.uid);
@@ -33,7 +33,8 @@ export const AuthProvider = ({ children }) => {
     if (!userDoc.exists()) {
       await setDoc(userDocRef, {
         email: userCredential.user.email,
-        displayName: userCredential.user.displayName || '',
+        displayName: username || '',
+        username: username || email.split('@')[0], // Use email prefix if username not provided
         phone: '',
         address: {
           street: '',

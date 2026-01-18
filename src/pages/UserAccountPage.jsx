@@ -12,6 +12,7 @@ const UserAccountPage = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
+    username: '',
     displayName: '',
     phone: '',
     address: {
@@ -39,6 +40,7 @@ const UserAccountPage = () => {
     if (profile) {
       console.log('Profile data received:', profile);
       setFormData({
+        username: profile.username || currentUser.email.split('@')[0],
         displayName: profile.displayName || '',
         phone: profile.phone || '',
         address: {
@@ -181,6 +183,10 @@ const UserAccountPage = () => {
                 <label>Email</label>
                 <div className="info-value">{currentUser.email}</div>
                 <small>Email cannot be changed</small>
+              </div>
+              <div className="info-item">
+                <label>Username</label>
+                <div className="info-value">{formData.username}</div>
               </div>
             </div>
 
