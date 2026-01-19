@@ -65,17 +65,17 @@ const imageOverrides = {
   1201: '/photos/Heeled_Sandals.jpeg',
   1202: '/photos/Heeled_Sandals.jpeg',
   13: '/photos/rajasthani_base.jpeg',
-  1301: '/photos/rajasthani_base.jpeg',
-  1302: '/photos/rajasthani_base.jpeg',
-  1303: '/photos/rajasthani_base.jpeg',
+  1301: '/photos/Rajasthani Lehenga - Blue.jpg',
+  1302: '/photos/Rajasthani Lehenga - Pink.jpg',
+  1303: '/photos/Rajasthani Lehenga - Green.jpg',
   14: '/photos/rajasthani_men_dress.jpeg',
   1401: '/photos/rajasthani_men_dress.jpeg',
   1402: '/photos/rajasthani_men_dress.jpeg',
-  15: '/photos/rajasthani_juti.jpeg',
-  1501: '/photos/rajasthani_juti.jpeg',
+  15: '/photos/Traditional Juttis - Red.jpg',
+  1501: '/photos/Traditional Juttis - Golden.jpg',
   1502: '/photos/rajasthani_juti.jpeg',
-  16: '/photos/Rajasthani_jewelry.jpeg',
-  1601: '/photos/Rajasthani_jewelry.jpeg',
+  16: '/photos/Rajasthani Jewelry.jpg',
+  1601: '/photos/Rajasthani Jewelry2.jpg',
   1602: '/photos/Rajasthani_jewelry.jpeg',
   18: '/photos/Embroidered_Mojris.jpeg',
   1801: '/photos/Embroidered_Mojris.jpeg',
@@ -485,12 +485,12 @@ const rawProducts = [
   // Ethnic Wear - Rajasthani Lehengas
   {
     id: 13,
-    name: 'Rajasthani Lehenga - Red',
+    name: 'Rajasthani Lehenga',
     category: 'Ethnic Wear',
     collection: 'Rajasthani Lehenga',
     price: 3499.0,
     originalPrice: 4999.0,
-    description: 'Traditional Rajasthani dress for women in red.'
+    description: 'Traditional Rajasthani dress for women'
   },
   {
     id: 1301,
@@ -570,12 +570,12 @@ const rawProducts = [
   },
   {
     id: 1502,
-    name: 'Traditional Juttis - Black',
+    name: 'Traditional Juttis',
     category: 'Footwear',
     collection: 'Traditional Juttis',
     price: 499.0,
     originalPrice: 799.0,
-    description: 'Traditional Rajasthani juttis in black.'
+    description: 'Traditional Rajasthani juttis.'
   },
 
   // Jewelry - Rajasthani Jewelry

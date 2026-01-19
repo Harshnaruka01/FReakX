@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { getProductById } from '../data/productCatalog';
 import './ProductDetailPage.css';
@@ -7,11 +7,14 @@ import './ProductDetailPage.css';
 const ProductDetailPage = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [addedToCart, setAddedToCart] = useState(false);
   
   const product = getProductById(productId);
+  const imageOverride = location.state?.imageOverride;
+  const productImage = imageOverride || product?.image;
 
   if (!product) {
     return (
@@ -39,7 +42,7 @@ const ProductDetailPage = () => {
     <div className="product-detail-page">
       <div className="product-detail-container">
         <div className="product-image-container">
-          <img src={product.image} alt={product.name} className="product-detail-image" />
+          <img src={productImage} alt={product.name} className="product-detail-image" />
         </div>
         <div className="product-info">
           <h1 className="product-title">{product.name}</h1>
